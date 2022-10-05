@@ -10,10 +10,6 @@ header h1{
 header .icon{
     width: 40px;
 }
-.line{
-    background-color: blue;
-    height: 8px;
-}
 main{
     margin-top: 50px;
 }
@@ -21,22 +17,22 @@ main .foto-perfil{
     background-color: black;
     width: 60px;
     height: 60px;
-    border-radius: 50px;
+    border-radius: 50%;
 }
 main .user h1{
     font-size: 20px;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 main .info{
-    margin-top: 70px;
     text-align: center;
 }
 main .info button{
-    width: 100px;
+    width: 120px;
     height: 32px;
-}
-main input{
-    margin-top: 110px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    color: #303030;
+    cursor:auto;
 }
 main .stories{
     margin-top: 50px;
@@ -45,9 +41,17 @@ main .stories{
     height: 60px;
     border-radius: 50px;
 }
-main .publicacao{
+main #post1{
     margin-top: 30px;
     background-color: rgb(90, 90, 90);
     width: 272px;
     height: 220px;
+    display: none;
+}
+main #post2{
+    margin-top: 30px;
+    background-color: rgb(90, 90, 90);
+    width: 272px;
+    height: 220px;
+    display: none;
 }

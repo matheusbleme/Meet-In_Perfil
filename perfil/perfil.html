@@ -19,12 +19,11 @@
                     <h1>Meet In</h1>
                 </div>
                 <div class="col-2">
-                    <img src="imagens/post-icon.png" alt="Adicionar nova publicação" class="icon">
-                    <img src="imagens/list-icon.png" alt="Lista de opcçoes" class="icon">
+                    <a href="javascript: post();"><img src="imagens/post-icon.png" alt="Adicionar nova publicação" class="icon"></a>
+                    <a href="..."><img src="imagens/list-icon.png" alt="Lista de opcçoes" class="icon"></a>
                 </div>
             </div>
         </div>
-        <div class="line"></div>
     </header>
     <main>
         <div class="container">
@@ -60,6 +59,8 @@
                         </button>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col">
                     <a href="editar_perfil.html">
                         <input type="button" value="Editar Perfil">
@@ -108,49 +109,25 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <!-- Grade de publicações | Início -->
+            <div class="row grade">
                 <div class="col-3">
-                    <div class="publicacao">
+                    <div id="post1">
                         <img src="..." alt="">
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="publicacao">
-                        <img src="..." alt="">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="publicacao">
-                        <img src="..." alt="">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="publicacao">
-                        <img src="..." alt="">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="publicacao">
-                        <img src="..." alt="">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="publicacao">
-                        <img src="..." alt="">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="publicacao">
-                        <img src="..." alt="">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="publicacao">
-                        <img src="..." alt="">
-                    </div>
-                </div>
+                <a href="javascript: excluirPost();">Excluir publicação</a>
             </div>
+            <!-- Grade de publicações | Fim -->
         </div>
+        <script type="text/javascript">
+            function post(){
+                document.getElementById('post1').style.display = 'block';
+            }
+            function excluirPost(){
+                document.getElementById('post1').style.display = 'none';
+            }
+        </script>
     </main>
 </body>
 </html>

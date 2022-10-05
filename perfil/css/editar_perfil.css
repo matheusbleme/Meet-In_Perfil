@@ -15,19 +15,20 @@ main .foto-perfil{
     background-color: black;
     width: 60px;
     height: 60px;
-    border-radius: 50px;
+    border-radius: 50%;
     margin-top: 50px;
 }
 main .foto{
     text-align: center;
 }
-main .editar{
-    text-align: center;
+main .formUser{
+    max-width: 100%;
 }
 main .editar input{
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: none;
+    outline: none;
+    color: #727272;
+    font-size: 16px;
 }
 main .editar .save{
     margin-top: 30px;
@@ -36,6 +37,7 @@ main .editar .save{
     border: none;
     width: 150px;
     height: 30px;
+    font-size: 16px;
 }
 main .text-line{
     width: 250px;
