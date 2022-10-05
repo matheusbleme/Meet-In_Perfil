@@ -7,23 +7,60 @@
     <meta name="author" content="Matheus Bleme">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap CSS | JS-->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!--Bootstrap CSS | JS-->
+
+    <script src="https://kit.fontawesome.com/cc3645eafc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/perfil.css">
-    <title>Meet In - Perfil</title>
+    <link rel="shortcut icon" href="imagens/Icon.png" type="image/x-icon">
+    <title>Meet In • Editar Perfil</title>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-10">
-                    <h1>Meet In</h1>
+        <div class="container-fluid container-lg">
+            <div class="row pt-2">
+                <div class="col-10 col-lg-9 text-center">
+                    <a href="">
+    <!--| Logo |-->     <h1 class="font-monospace user-select-none">Meet In</h1>
+                    </a>
                 </div>
-                <div class="col-2">
-                    <img src="imagens/post-icon.png" alt="Adicionar nova publicação" class="icons">
-                    <img src="imagens/list-icon.png" alt="popup" class="icons">
+                <div class="col-2 col-lg-3 text-center justify-content-center">
+                    <button data-bs-toggle="dropdown" aria-expanded="false">
+                        <h2 class="fs-1">
+    <!--| Perfil |-->       <i id="perfil" class="fa-solid fa-circle-user ballon"></i>
+                        </h2>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">
+                            <i class="fa-solid fa-circle-user"></i> Conta
+                        </a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <i class="fa-solid fa-comments"></i> Conversas
+                        </a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <i class="fa-solid fa-plus"></i> Adicionar Publicação
+                        </a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <i class="fa-solid fa-heart"></i> Favoritos
+                        </a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <i class="fa-solid fa-bookmark"></i> Salvos
+                        </a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <i class="fa-solid fa-gear"></i> Configurações
+                        </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sair</a></li>
+                      </ul>
                 </div>
             </div>
         </div>
+        <div class="container-fluid pb-2 blue"></div>
     </header>
     <main>
         <div class="container">
@@ -42,7 +79,7 @@
                             <input type="text" placeholder="Fale sobre você..." disabled> <br>
                             <div class="edit-button">
                                 <img src="imagens/editar_icon.png" alt="Editar perfil" class="icon_edit_perfil">
-                                <a href="editar_perfil.html"><p>Editar Perfil</p></a>
+                                <a href="editar_perfil.html"><p>Editar perfil</p></a>
                             </div>
                         </div>
                     </form>
@@ -87,6 +124,7 @@
             </div>
             <!-- Grade de publicações | Fim -->
         </div>
+    </div>
         <script type="text/javascript">
             function post(){
                 document.getElementById('post1').style.display = 'block';
