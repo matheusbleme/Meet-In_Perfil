@@ -7,23 +7,8 @@ header{
 header h1{
     font-size: 30px;
 }
-header .icon{
+header .icons{
     width: 40px;
-}
-#popup{
-    position: absolute;
-    margin-left: 1120px;
-    margin-bottom: 50px;
-    width: 160px;
-    display: none;
-}
-#popup button{
-    width: 100%;
-    border: none;
-    height: 40px;
-}
-#popup button:hover{
-    background-color: #e0dede;
 }
 main{
     margin-top: 50px;
@@ -49,33 +34,58 @@ main .info button{
     color: #303030;
     cursor:auto;
 }
-main #adicionarStatus button{
-    margin-top: 30px;
-    background-color: blue;
-    border: none;
+main #input_foto_perfil{
+    display: none;
 }
-main #adicionarStatus img{
-    width: 50px;
+main .foto_perfil{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
-main #stories{
+main #picture_input{
+    display: none;
+}
+main .picture{
+    width: 300px;
+    height: 220px;
+    background-color: #ddd;
+    color: #727272;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+main form{
     margin-top: 50px;
-    background-color: black;
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
-    display: none;
 }
-main #post1{
-    margin-top: 30px;
-    background-color: rgb(90, 90, 90);
-    width: 272px;
-    height: 220px;
-    display: none;
+main .username{
+    background-color: white;
 }
-main #post2{
-    margin-top: 30px;
-    background-color: rgb(90, 90, 90);
-    width: 272px;
-    height: 220px;
-    display: none;
+main form input{
+    background-color: white;
+    border: none;
+    outline: none;
+}
+main .edit-button{
+    margin-top: 20px;
+}
+main .edit-button img{
+    display: inline-block;
+}
+main .edit-button a{
+    display: inline-block;
+    margin-left: 5px;
+    text-decoration: none;
+    color: black;
+}
+.lapis-icon{
+    width: 22px;
+}
+.icon_edit_perfil{
+    width: 20px;
 }
