@@ -10,6 +10,21 @@ header h1{
 header .icon{
     width: 40px;
 }
+#popup{
+    position: absolute;
+    margin-left: 1120px;
+    margin-bottom: 50px;
+    width: 160px;
+    display: none;
+}
+#popup button{
+    width: 100%;
+    border: none;
+    height: 40px;
+}
+#popup button:hover{
+    background-color: #e0dede;
+}
 main{
     margin-top: 50px;
 }
@@ -34,12 +49,21 @@ main .info button{
     color: #303030;
     cursor:auto;
 }
-main .stories{
+main #adicionarStatus button{
+    margin-top: 30px;
+    background-color: blue;
+    border: none;
+}
+main #adicionarStatus img{
+    width: 50px;
+}
+main #stories{
     margin-top: 50px;
     background-color: black;
     width: 60px;
     height: 60px;
     border-radius: 50px;
+    display: none;
 }
 main #post1{
     margin-top: 30px;
