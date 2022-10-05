@@ -42,7 +42,7 @@
                         <li><a class="dropdown-item" href="#">
                             <i class="fa-solid fa-comments"></i> Conversas
                         </a></li>
-                        <li><a class="dropdown-item" href="#">
+                        <li><a class="dropdown-item" href="javascript: newpost();">
                             <i class="fa-solid fa-plus"></i> Adicionar Publicação
                         </a></li>
                         <li><a class="dropdown-item" href="#">
@@ -63,6 +63,25 @@
         <div class="container-fluid pb-2 blue"></div>
     </header>
     <main>
+        <div id="post">
+            <label class="picture" for="picture_input" tabindex="0">
+                <button>
+                    <a href="javascript: fecharpopup();"><img src="imagens/x-icon.png" alt="fechar pop-up" class="x-icon"></a>
+                </button>
+                <a href="javascript: publicar();"><img src="imagens/new-post-icon.png" alt="new post icon" class="newpost-icon"></a>
+            </label>
+        </div>
+        <script type="text/javascript">
+            function newpost(){
+                document.getElementById('post').style.display = 'block';
+            }
+            function fecharpopup(){
+                document.getElementById('post').style.display = 'none';
+            }
+            function publicar(){
+                document.getElementById('post_perfil').style.display = 'block';
+            }
+        </script>
         <div class="container">
             <div class="row">
                 <div class="col user">
@@ -113,12 +132,8 @@
             <!-- Grade de publicações | Início -->
             <div class="row grade">
                 <div class="col-3">
-                    <div id="post1">
-                        <label class="picture" for="picture_input" tabindex="0">
-                            <input type="file" accept="image/*" id="picture_input">
-                            <span class="picture_image">publicação</span>
-                        </label>
-                        <a href="javascript: excluirPost();">Excluir publicação</a>
+                    <div id="post_perfil">
+                        <p>post 1</p>
                     </div>
                 </div>
             </div>

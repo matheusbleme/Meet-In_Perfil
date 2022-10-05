@@ -71,14 +71,13 @@ main #picture_input{
     display: none;
 }
 main .picture{
-    width: 300px;
-    height: 220px;
+    width: 500px;
+    height: 300px;
     background-color: #ddd;
     color: #727272;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 main form{
     margin-top: 50px;
@@ -136,4 +135,36 @@ main .edit-button a{
 {
     background-color: #202020;
     border: none;
+}
+#post{
+    position: absolute;
+    padding-left: 420px;
+    display: none;
+}
+.picture button{
+    border: none;
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    margin-left: 467px;
+    margin-bottom: 270px;
+}
+.picture .x-icon{
+    width: 15px;
+    padding-bottom: 3px;
+}
+.picture .newpost-icon{
+    width: 130px;
+    cursor: pointer;
+}
+#post_perfil{
+    width: 300px;
+    height: 220px;
+    background-color: #202020;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    display: none;
 }
