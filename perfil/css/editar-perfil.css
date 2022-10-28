@@ -32,28 +32,27 @@ header > .blue
 }
 main{
     margin-top: 70px;
+    margin-bottom: 70px;
 }
 main .ft_perfil{
     background-color: #202020;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    height: 400px;
+    height: 430px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .alterar-foto{
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     background-color: #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 190px;
-    margin-top: 120px;
-}
-.icon_alt_foto{
-    width: 100px;
 }
 main .edit{
     background-color: white;
@@ -96,4 +95,33 @@ main .botoes input{
     background-image: linear-gradient(to right, #4169E1 , #1e90ff , #4169E1);
     color: white;
     margin-left: 5px;
+}
+#picture--input{
+    display: none;
+}
+.picture--img{
+    width: 100%;
+    height: 170px;
+    border-radius: 50%;
+}
+.picture{
+    width: 400px;
+    aspect-ratio: 16/9;
+    background-color: #ddd;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #aaa;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, backgrund-color 300ms ease-in-out;
+}
+.picture:hover{
+    color: #999;
+    background-color: #ccc;
+}
+picture:active{
+    background-color: #ddd;
+    color: #aaa;
 }

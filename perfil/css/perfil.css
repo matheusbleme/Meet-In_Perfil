@@ -106,11 +106,6 @@ main form input{
     border: none;
     outline: none;
 }
-#post{
-    position: absolute;
-    padding-left: 420px;
-    display: none;
-}
 .picture button{
     border: none;
     width: 35px;
@@ -119,22 +114,36 @@ main form input{
     margin-left: 467px;
     margin-bottom: 270px;
 }
-.picture .x-icon{
-    width: 15px;
-    padding-bottom: 3px;
-}
-.picture .newpost-icon{
-    width: 130px;
-    cursor: pointer;
-}
 #post_perfil{
     width: 300px;
     height: 220px;
-    background-color: #202020;
-    color: white;
+    margin-bottom: 10px;
+    display: none;
+}
+.modal-body form .picture{
+    width: 100%;
+    background-color: #ddd;
+    color: #aaa;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+    border: 2px dashed #aaa;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, backgrund-color 300ms ease-in-out;
+    margin-bottom: 60px;
+}
+.picture:hover{
+    color: #999;
+    background-color: #ccc;
+}
+picture:active{
+    background-color: #ddd;
+    color: #aaa;
+}
+.picture--img{
+    width: 100%;
+}
+#picture--input{
     display: none;
 }

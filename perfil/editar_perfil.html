@@ -59,14 +59,13 @@
     <main>
         <div class="container bloco">
             <div class="row">
-                <div class="col-6 ft_perfil">
-                    <label for="">
-                        <div class="alterar-foto">
-                            <img src="imagens/edit_profile_user_icon_148629.png" alt="" class="icon_alt_foto">
-                        </div>
+                <div class="col-md-6 col-sm-12 col-lg-6 ft_perfil">
+                    <label class="alterar-foto" for="picture--input" tabindex="0">
+                        <span class="picture--image"></span>
+                        <input type="file" accept="image/*" id="picture--input">
                     </label>
                 </div>
-                <div class="col-6 edit">
+                <div class="col-md-6 col-sm-12 col-lg-6 edit">
                     <div>
                         <p>Alterar Informações do perfil</p>
                         <label for="...">
@@ -88,6 +87,34 @@
                     </div>
                 </div>
             </div>
+            <script>
+                const inputFile = document.querySelector('#picture--input');
+                const pictureImage = document.querySelector('.picture--image');
+        
+                inputFile.addEventListener('change', function(e) {
+                    const inputTarget = e.target;
+                    console.log(inputTarget);
+                    const file = inputTarget.files[0];
+        
+                    if (file){
+                        const reader = new FileReader();
+        
+                        reader.addEventListener('load', function(e) {
+                            const readerTarget = e.target;
+        
+                            const img = document.createElement('img');
+                            img.src = readerTarget.result;
+                            img.classList.add('picture--img');
+        
+                            pictureImage.appendChild(img);
+                        });
+        
+                        reader.readAsDataURL(file);
+                    } else {
+                        pictureImage.innerHTML = pictureImageTxt;
+                    }
+                });
+            </script>
         </div>
     </main>
 </body>

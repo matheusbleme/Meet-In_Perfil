@@ -36,7 +36,7 @@
                         <li><a class="dropdown-item" href="#">
                             <i class="fa-solid fa-comments"></i> Conversas
                         </a></li>
-                        <li><a class="dropdown-item" href="javascript: newpost();">
+                        <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ADD-Post">
                             <i class="fa-solid fa-plus"></i> Adicionar Publicação
                         </a></li>
                         <li><a class="dropdown-item" href="#">
@@ -57,25 +57,31 @@
         <div class="container-fluid pb-2 blue"></div>
     </header>
     <main>
-        <div id="post">
-            <label class="picture" for="picture_input" tabindex="0">
-                <button>
-                    <a href="javascript: fecharpopup();"><img src="imagens/x-icon.png" alt="fechar pop-up" class="x-icon"></a>
-                </button>
-                <a href="javascript: publicar();"><img src="imagens/new-post-icon.png" alt="new post icon" class="newpost-icon"></a>
-            </label>
+        <div id="ADD-Post" class="modal fade mt-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                        <h5 class="modal-title fs-5" id="exampleModalLabel">Criar nova publicação</h5>
+                    </div>
+                    <div class="modal-body">
+                       
+                        <form enctype="multipart/form-data" action="__URL__" method="POST">
+                            <div class="new--post">
+                                <label class="picture" for="picture--input" tabindex="0">
+                                    <span class="picture--image"></span>
+                                </label>
+                                <input type="hidden" name="MAX_FILE_SIZE" value="30000"/>
+                                <input type="file" accept="image/*" id="picture--input">
+                            </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                          <input type="button" class="btn btn-primary" value="Confirmar" id="conf"/>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script type="text/javascript">
-            function newpost(){
-                document.getElementById('post').style.display = 'block';
-            }
-            function fecharpopup(){
-                document.getElementById('post').style.display = 'none';
-            }
-            function publicar(){
-                document.getElementById('post_perfil').style.display = 'block';
-            }
-        </script>
         <div class="container">
             <div class="row">
                 <div class="col user">
@@ -122,21 +128,44 @@
             <!-- Grade de publicações | Início -->
             <div class="row grade">
                 <div class="col-3">
-                    <div id="post_perfil">
-                        <p>post 1</p>
-                    </div>
+                    <img src="imagens/teste-postagem.jfif" alt="Exemplo de publicação no perfil" id="post_perfil">
                 </div>
             </div>
             <!-- Grade de publicações | Fim -->
         </div>
-        <script type="text/javascript">
-            function post(){
-                document.getElementById('post1').style.display = 'block';
-            }
-            function excluirPost(){
-                document.getElementById('post1').style.display = 'none';
-            }
-        </script>
     </main>
+    <script>
+        const inputFile = document.querySelector('#picture--input');
+        const pictureImage = document.querySelector('.picture--image');
+        const pictureImageTxt = 'Adicionar Publicação';
+        pictureImage.innerHTML = pictureImageTxt;
+    
+        inputFile.addEventListener('change', function(e) {
+            const inputTarget = e.target;
+            console.log(inputTarget);
+            const file = inputTarget.files[0];
+    
+            if (file){
+            const reader = new FileReader();
+    
+                reader.addEventListener('load', function(e) {
+            const readerTarget = e.target;
+    
+            const img = document.createElement('img');
+            img.src = readerTarget.result;
+            img.classList.add('picture--img');
+    
+            pictureImage.appendChild(img);
+        });
+    
+        reader.readAsDataURL(file);
+    } else {
+        pictureImage.innerHTML = pictureImageTxt;
+    }
+        });
+    </script>
+    <script>
+        
+    </script>
 </body>
 </html>
