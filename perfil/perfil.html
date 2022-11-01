@@ -11,7 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/cc3645eafc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/perfil.css">
-    <link rel="shortcut icon" href="imagens/Icon.png" type="image/x-icon">
+    <script src="JS/script.js"></script>
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
     <title>Meet In • Perfil</title>
 </head>
 <body>
@@ -75,7 +76,7 @@
                             </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                          <input type="button" class="btn btn-primary" value="Confirmar" id="conf"/>
+                          <a href="javascript: publicar();"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirmar</button></a>
                         </div>
                         </form>
                     </div>
@@ -84,7 +85,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col user">
+                <div class="col-12 col-md-3 col-sm-12 col-xs-12 col-lg-3 user">
                     <div class="ft_perfil">
                         <img src="..." alt="">
                     </div>
@@ -99,7 +100,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col">
+                <div class="col-4 col-md-3 col-sm-4 col-lg-3">
                     <div class="info">
                         <p>0</p>
                         <button>
@@ -107,7 +108,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-4 col-md-3 col-sm-4 col-lg-3">
                     <div class="info">
                         <p>0</p>
                         <button>
@@ -115,7 +116,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-4 col-md-3 col-sm-4 col-lg-3">
                     <div class="info">
                         <p>0</p>
                         <button>
@@ -125,9 +126,17 @@
                 </div>
             </div>
             <hr>
+            <div class="row">
+                <div class="col-12 col-md-12 col-sm-12 col-lg-12">
+                    <div id="first-post">
+                        <img src="imagens/first-post-icon.jfif" alt="new post icon" class="npi" data-bs-toggle="modal" data-bs-target="#ADD-Post">
+                        <p>Você ainda não publicou nada.</p>
+                    </div>
+                </div>
+            </div>
             <!-- Grade de publicações | Início -->
             <div class="row grade">
-                <div class="col-3">
+                <div class="col-md-3 col-sm-3 col-lg-3">
                     <img src="imagens/teste-postagem.jfif" alt="Exemplo de publicação no perfil" id="post_perfil">
                 </div>
             </div>
@@ -139,33 +148,31 @@
         const pictureImage = document.querySelector('.picture--image');
         const pictureImageTxt = 'Adicionar Publicação';
         pictureImage.innerHTML = pictureImageTxt;
-    
+
         inputFile.addEventListener('change', function(e) {
             const inputTarget = e.target;
             console.log(inputTarget);
             const file = inputTarget.files[0];
-    
+
             if (file){
             const reader = new FileReader();
-    
-                reader.addEventListener('load', function(e) {
+
+            reader.addEventListener('load', function(e) {
             const readerTarget = e.target;
-    
+
             const img = document.createElement('img');
             img.src = readerTarget.result;
             img.classList.add('picture--img');
-    
+
+            pictureImage.innerHTML = '';
             pictureImage.appendChild(img);
+            });
+
+            reader.readAsDataURL(file);
+            } else {
+            pictureImage.innerHTML = pictureImageTxt;
+            }
         });
-    
-        reader.readAsDataURL(file);
-    } else {
-        pictureImage.innerHTML = pictureImageTxt;
-    }
-        });
-    </script>
-    <script>
-        
     </script>
 </body>
 </html>

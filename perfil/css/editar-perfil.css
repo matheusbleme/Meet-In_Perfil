@@ -45,14 +45,14 @@ main .ft_perfil{
     align-items: center;
     justify-content: center;
 }
-.alterar-foto{
-    width: 170px;
-    height: 170px;
+main .picture{
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    background-color: #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 main .edit{
     background-color: white;
@@ -84,38 +84,28 @@ main .botoes button{
     height: 35px;
     border-radius: 7px;
     border: none;
-    background-color: #ddd;
-    color: #202020;
+    background-image: linear-gradient(to right, rgb(43, 43, 43) , rgb(49, 49, 49) , rgb(37, 37, 37));
+    color: white;
 }
 main .botoes input{
     width: 120px;
     height: 35px;
     border-radius: 7px;
     border: none;
-    background-image: linear-gradient(to right, #4169E1 , #1e90ff , #4169E1);
+    background-image: linear-gradient(to right, #373ad1 , #1d72c7);
     color: white;
     margin-left: 5px;
 }
 #picture--input{
     display: none;
 }
-.picture--img{
-    width: 100%;
-    height: 170px;
-    border-radius: 50%;
-}
 .picture{
     width: 400px;
-    aspect-ratio: 16/9;
-    background-color: #ddd;
-    color: #aaa;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px dashed #aaa;
     cursor: pointer;
     font-family: sans-serif;
-    transition: color 300ms ease-in-out, backgrund-color 300ms ease-in-out;
 }
 .picture:hover{
     color: #999;
@@ -124,4 +114,13 @@ main .botoes input{
 picture:active{
     background-color: #ddd;
     color: #aaa;
+}
+.ft-alt{
+    width: 100%;
+    border-radius: 50%;
+}
+.picture--img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
 }
